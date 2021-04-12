@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Projet_final_s8">
+        <activity android:name=".ui.settings.SettingsActivity" />
         <activity
             android:name=".ui.splash.SplashActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
@@ -18,8 +19,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.main.MainActivity">
-        </activity>
+        <activity android:name=".ui.main.MainActivity" />
     </application>
 
 </manifest>

@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="settings">Paramètres</string>
     <string name="location_history">Historique d\'emplacements</string>
     <string name="app_name">Projet final eseo</string>
+    <string name="go_back">Retour</string>
+    <string name="location">Localisez moi</string>
+    <string name="location_settings">Paramètres de localisation</string>
+    <string name="application_settings">Paramètres de l\'application</string>
+    <string name="eseo_website_text">Site de l\'ESEO</string>
+    <string name="feedback">Feedback</string>
 </resources>
