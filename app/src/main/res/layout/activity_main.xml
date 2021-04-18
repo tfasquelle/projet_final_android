@@ -10,13 +10,13 @@
         android:id="@+id/mainImage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:src="@drawable/image_main"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintLeft_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mainBSettings"
-        app:layout_constraintVertical_bias="0.01999998" />
+        app:layout_constraintBottom_toTopOf="@+id/mainBLocation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainBSettings" />
 
     <ImageButton
         android:id="@+id/mainBSettings"
@@ -33,25 +33,23 @@
         android:id="@+id/mainBLocation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/mainImage"
+        android:text="@string/location"
         app:layout_constraintBottom_toBottomOf="@id/mainBHistory"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:text="@string/location"
-        />
+        app:layout_constraintTop_toBottomOf="@id/mainImage" />
 
     <Button
         android:id="@+id/mainBHistory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
-        app:layout_constraintTop_toBottomOf="@id/mainBLocation"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="40dp"
+        android:text="@string/location_history"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:text="@string/location_history"
-        />
-
+        app:layout_constraintTop_toBottomOf="@id/mainBLocation" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

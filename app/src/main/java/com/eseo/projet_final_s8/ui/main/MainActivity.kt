@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.eseo.projet_final_s8.databinding.ActivityMainBinding
+import com.eseo.projet_final_s8.ui.history.HistoryActivity
 import com.eseo.projet_final_s8.ui.settings.SettingsActivity
 
 class MainActivity : AppCompatActivity() {
@@ -18,6 +19,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.mainBSettings.setOnClickListener {
             startActivity(SettingsActivity.getStartIntent(this))
+        }
+
+        binding.mainBHistory.setOnClickListener {
+            startActivity(HistoryActivity.getStartIntent(this))
         }
     }
 
