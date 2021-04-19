@@ -12,24 +12,24 @@
         android:layout_height="0dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
-        android:src="@drawable/vous_deviene_fou"
         android:layout_marginBottom="15dp"
+        android:contentDescription="@string/you_becomes_crazy"
+        android:src="@drawable/vous_deviene_fou"
         app:layout_constraintBottom_toTopOf="@+id/mainBLocation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mainBSettings"
-        android:contentDescription="@string/you_becomes_crazy" />
+        app:layout_constraintTop_toBottomOf="@id/mainBSettings" />
 
     <ImageButton
         android:id="@+id/mainBSettings"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:contentDescription="@string/access_to_shortcut"
         android:src="@drawable/main_icon_settings"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/access_to_shortcut" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <Button
@@ -40,7 +40,8 @@
         app:layout_constraintBottom_toBottomOf="@id/mainBHistory"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mainImage" />
+        app:layout_constraintTop_toBottomOf="@id/mainImage"
+        android:backgroundTint="@color/calme"/>
 
     <Button
         android:id="@+id/mainBHistory"
@@ -52,7 +53,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mainBLocation" />
+        app:layout_constraintTop_toBottomOf="@id/mainBLocation"
+        android:backgroundTint="@color/fou"
+        />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

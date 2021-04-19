@@ -5,6 +5,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.provider.Settings
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.afollestad.recyclical.datasource.dataSourceTypedOf
 import com.afollestad.recyclical.setup
@@ -16,6 +17,7 @@ import com.eseo.projet_final_s8.ui.main.MainActivity
 class SettingsActivity : AppCompatActivity() {
 
     private val dataSource =  dataSourceTypedOf(
+        // les strings sont en dur parceque les extraire produit des null pointer exception
         SettingsItem("Feedback", R.drawable.icon_feedback) {
             startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("mailto:theotim.fasquelle@reseau.eseo.fr")))
         },
@@ -35,7 +37,6 @@ class SettingsActivity : AppCompatActivity() {
         SettingsItem("eseo address", R.drawable.logo_eseo) {
             startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("geo:47.49308895618015, -0.5513870146020509")))
         }
-
     )
 
     private lateinit var binding: ActivitySettingsBinding
@@ -50,6 +51,7 @@ class SettingsActivity : AppCompatActivity() {
             setDisplayHomeAsUpEnabled(true)
             setDisplayShowHomeEnabled(true)
         }
+        Toast.makeText(this, "plouf", Toast.LENGTH_SHORT).show()
 
         binding.settingsRV.setup {
             withDataSource(dataSource)

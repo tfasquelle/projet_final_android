@@ -10,17 +10,10 @@
         android:id="@+id/settingsRV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/frontEndMeme"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         />
 
-    <ImageView
-        android:id="@+id/frontEndMeme"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:src="@drawable/front_end_vs_back_end"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/settingsRV"
-        android:contentDescription="@string/front_vs_back_description" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
