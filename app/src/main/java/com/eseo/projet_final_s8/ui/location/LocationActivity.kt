@@ -44,6 +44,7 @@ class LocationActivity : AppCompatActivity() {
 
         binding.locateButton.setOnClickListener {
             getLocation()
+            binding.frontEndMeme.visibility=android.widget.ImageView.VISIBLE
         }
         supportActionBar?.apply {
             title = getString(R.string.go_back)
