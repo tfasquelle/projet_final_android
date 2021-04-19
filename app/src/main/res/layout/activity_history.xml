@@ -10,18 +10,11 @@
         android:id="@+id/location_history_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@id/frontEndMeme"
+        app:layout_constraintBottom_toTopOf="@id/eraseButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
-    <ImageView
-        android:id="@+id/frontEndMeme"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:src="@drawable/front_end_vs_back_end"
-        app:layout_constraintTop_toBottomOf="@id/location_history_recycler_view"
-        app:layout_constraintBottom_toTopOf="@id/eraseButton"
-        android:contentDescription="@string/front_vs_back_description" />
+
     <Button
         android:id="@+id/eraseButton"
         android:layout_width="wrap_content"
