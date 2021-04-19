@@ -20,9 +20,7 @@ class SettingsActivity : AppCompatActivity() {
             startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("mailto:theotim.fasquelle@reseau.eseo.fr")))
         },
         SettingsItem("location settings", R.drawable.icon_location_settings) {
-            val intent =
-                Intent(Settings.ACTION_LOCALE_SETTINGS)
-            startActivity(intent)
+            startActivity(Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS))
         },
         SettingsItem("application settings", R.drawable.icon_settings) {
             val intent =
@@ -33,7 +31,11 @@ class SettingsActivity : AppCompatActivity() {
         },
         SettingsItem("eseo website", R.drawable.logo_eseo) {
             startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://eseo.fr")))
+        },
+        SettingsItem("eseo address", R.drawable.logo_eseo) {
+            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("geo:47.49308895618015, -0.5513870146020509")))
         }
+
     )
 
     private lateinit var binding: ActivitySettingsBinding

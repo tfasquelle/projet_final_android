@@ -9,14 +9,16 @@
     <ImageView
         android:id="@+id/mainImage"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
-        android:src="@drawable/image_main"
+        android:src="@drawable/vous_deviene_fou"
+        android:layout_marginBottom="15dp"
         app:layout_constraintBottom_toTopOf="@+id/mainBLocation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mainBSettings" />
+        app:layout_constraintTop_toBottomOf="@id/mainBSettings"
+        android:contentDescription="@string/you_becomes_crazy" />
 
     <ImageButton
         android:id="@+id/mainBSettings"
@@ -26,14 +28,15 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/access_to_shortcut" />
 
 
     <Button
         android:id="@+id/mainBLocation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/location"
+        android:text="@string/please_locate_me"
         app:layout_constraintBottom_toBottomOf="@id/mainBHistory"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

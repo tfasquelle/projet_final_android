@@ -3,9 +3,18 @@
     <string name="location_history">Historique d\'emplacements</string>
     <string name="app_name">Projet final eseo</string>
     <string name="go_back">Retour</string>
-    <string name="location">Localisez moi</string>
     <string name="location_settings">Paramètres de localisation</string>
     <string name="application_settings">Paramètres de l\'application</string>
     <string name="eseo_website_text">Site de l\'ESEO</string>
     <string name="feedback">Feedback</string>
+    <string name="please_locate_me">Localisez moi</string>
+    <string name="need_permission_dialog_title">Permission nécessaire</string>
+    <string name="need_location_dialog_message">Cette fonctionalité nécessite l\'accès à votre position !</string>
+    <string name="No">Non</string>
+    <string name="OK">OK</string>
+    <string name="erase_all">Tout effacer</string>
+    <string name="you_becomes_crazy">Meme : Vous devienne fou</string>
+    <string name="access_to_shortcut">accedez aux raccourcis</string>
+    <string name="front_vs_back_description">Meme à propo du dev front end et back end</string>
+    <string name="press_the_button">Appuyez sur le bouton !</string>
 </resources>

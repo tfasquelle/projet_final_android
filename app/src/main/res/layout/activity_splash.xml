@@ -10,7 +10,7 @@
         android:id="@+id/logoSplash"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/logo_splash"
+        android:src="@drawable/trex"
         app:layout_constraintBottom_toTopOf="@+id/textSplash"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
