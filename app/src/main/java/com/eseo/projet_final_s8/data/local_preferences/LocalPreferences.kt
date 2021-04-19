@@ -17,19 +17,20 @@ class LocalPreferences private constructor(val context: Context) {
         return sharedPreferences.getString("saveStringValue", null)
     }
 
-
+    //retourne directement l'historique
     fun getHistory(): MutableSet<String>? {
         val history = sharedPreferences.getStringSet("location_history", emptySet())
         return history
     }
 
-
     fun addToHistory(newEntry: String){
         val history = this.getHistory()
+        // création d'une copie de l'historique avec le nouvel élément en plus puis l'enregistre
         val newHistory = history?.plus(newEntry)
         sharedPreferences.edit().putStringSet("location_history", newHistory).apply()
     }
 
+    //vide les sharedpreferences
     fun eraseHistory(){
         sharedPreferences.edit().clear().apply()
     }

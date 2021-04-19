@@ -82,6 +82,7 @@ class LocationActivity : AppCompatActivity() {
                     // Permission obtenue, Nous continuons la suite de la logique.
                     getLocation()
                 } else {
+                    // création du dialog de demande de permission
                     val dialog = MaterialDialog(this)
                             .title(R.string.need_permission_dialog_title)
                             .message(R.string.need_location_dialog_message)
@@ -89,19 +90,16 @@ class LocationActivity : AppCompatActivity() {
                                 startActivity(MainActivity.getStartIntent(this))
                                 finish()
                             }
-                    //  Permission refusée de menière permanente -> renvoie vers les paramètres
+                    //  Permission refusée de menière permanente -> renvoi vers les paramètres
                     if (!shouldShowRequestPermissionRationale(android.Manifest.permission.ACCESS_FINE_LOCATION)) {
                         dialog.positiveButton(R.string.OK) {
                             startActivity(Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.parse("package:" + BuildConfig.APPLICATION_ID)))
-                        }
-                                .show()
+                        }.show()
                     } else { // refusé temporairement
                         dialog.positiveButton(R.string.OK) {
                             requestPermission()
-                        }
-                        .show()
+                        }.show()
                     }
-                    // Permission non accepté, expliqué ici via une activité ou une dialog pourquoi nous avons besoin de la permission
                 }
                 return
             }
@@ -112,12 +110,15 @@ class LocationActivity : AppCompatActivity() {
     @SuppressLint("MissingPermission")
     private fun getLocation() {
         if (hasPermission()) {
+            // on utilise les play services pour toujours avoir un résultat
             fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
             fusedLocationClient.getCurrentLocation(LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY, CancellationTokenSource().token)
                     .addOnSuccessListener {
                         if (it != null) {
+                            // succcès
                             geoCode(it)
                         } else {
+                            // echec (gps désactivé par exmeple)
                             Toast.makeText(this, "Localisation impossible", Toast.LENGTH_SHORT).show()
                         }
                     }

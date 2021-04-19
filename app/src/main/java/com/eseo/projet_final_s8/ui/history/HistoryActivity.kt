@@ -40,15 +40,18 @@ class HistoryActivity : AppCompatActivity() {
         }
 
         binding.locationHistoryRecyclerView.setup {
+            // création du datasource
             val dataSource: DataSource<Any> = emptyDataSource()
-
+            // remplissage avec le contenu sauvegardé dans les sharedpreferences
             for(str in LocalPreferences.getInstance(this@HistoryActivity).getHistory()!!){
                 dataSource.add(LocationItem(str, fun () {
+                    // cliquer sur une adresse ouvre google maps à cette position
                     val uri: String = "geo:0,0?q="+Uri.encode(str)
                     val intent = Intent(Intent.ACTION_VIEW, Uri.parse(uri))
                     startActivity(intent)
                 }))
             }
+            // binding entre le recyclerView et la dataSource
             withDataSource(dataSource)
             withItem<LocationItem, LocationItemViewHolder>(R.layout.location_item_list) {
                 onBind(::LocationItemViewHolder) { index, item ->

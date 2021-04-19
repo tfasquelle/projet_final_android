@@ -17,7 +17,7 @@ import com.eseo.projet_final_s8.ui.main.MainActivity
 class SettingsActivity : AppCompatActivity() {
 
     private val dataSource =  dataSourceTypedOf(
-        // les strings sont en dur parceque les extraire produit des null pointer exception
+        // les strings sont en dur parce que les extraire produit des null pointer exception
         SettingsItem("Feedback", R.drawable.icon_feedback) {
             startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("mailto:theotim.fasquelle@reseau.eseo.fr")))
         },
@@ -51,6 +51,7 @@ class SettingsActivity : AppCompatActivity() {
             setDisplayHomeAsUpEnabled(true)
             setDisplayShowHomeEnabled(true)
         }
+        // c'était du debug mais quand je l'ai vu à la fin ça m'a fait rire alors je le laisse
         Toast.makeText(this, "plouf", Toast.LENGTH_SHORT).show()
 
         binding.settingsRV.setup {
